@@ -12,6 +12,7 @@
             text-align:center;
             font-weight : normal;
             color: rgb(100,34,56);
+            margin-bottom:16px;
         }
         #banner
         {
@@ -35,11 +36,18 @@
     </style>
 </head>
 <body>
-    <div id="container">
-    <h1>Jovian Careers</h1>
+    {%include 'nav.html'%}
     <img class="img-fluid" id="banner" src="static/banner-1.jpg">
-    <h2>About Jovian</h2>
-    <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ante eget nisi accumsan bibendum. Integer euismod vel neque non tristique. Morbi mollis metus in lacus accumsan, ut semper eros rhoncus. Integer euismod iaculis mi, non facilisis ante. Cras posuere lacus mi, a dignissim justo imperdiet id. Ut sed hendrerit turpis, a porta elit. Nam ac tristique magna. Nulla.</p>
+    <div id="container">
+    <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+        <div class="row" style="margin-bottom:16px;">
+            <div class="col-md-6">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet ante eget nisi accumsan bibendum. Integer euismod vel neque non tristique. Morbi mollis metus in lacus accumsan, ut semper eros rhoncus. Integer euismod iaculis mi, non facilisis ante. Cras posuere lacus mi, a dignissim justo imperdiet id. Ut sed hendrerit turpis, a porta elit. Nam ac tristique magna. Nulla.</p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+            <img src="/static/image-2.jpg" style="height:320px; border-radius:4px;">
+            </div>
+        </div>
     <h2>Job Openings</h2>
     <div>
         {%for job in jobs%}
@@ -47,10 +55,10 @@
         {%endfor%}
     </div>
         <div style="text-align:center;">
-            <button class ="btn btn-primary btn-lg">Contact Us</button>
-             <p class="mt-4">Copyright Jovian, 2024</p>
+            <a href="mailto:hello@jovian.ai" class ="btn btn-primary btn-lg">Contact Us</a>
         </div>
- 
         </div>
+    {%include 'footer.html' %}
+    
 </body>
 </html>
